@@ -2,7 +2,6 @@ package lab2.task1;
 
 import lab2.util.ArrayHandler;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
