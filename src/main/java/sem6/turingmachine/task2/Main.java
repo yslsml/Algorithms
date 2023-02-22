@@ -6,6 +6,11 @@ import static sem6.turingmachine.task2.Alphabet.*;
 
 public class Main {
 
+    /**
+     * Г={ | }. Считая слово P записью положительного числа в единичной
+     * системе счисления, уменьшить это число на 1.
+     */
+
     public static void main(String[] args) {
 
         String[] array = {space, one, one, one, one, space, one, one, space, one, one, one, space, one , space};

@@ -6,6 +6,11 @@ import static sem6.turingmachine.task1.Alphabet.*;
 
 public class Main {
 
+    /**
+     *  Г={a,b,c}. Если в слово P не входит символ a, то заменить в P все символы b на с,
+     *  иначе в качестве ответа выдать слово из одного символа a.
+     */
+
     public static void main(String[] args) {
 
         String[] array = {space, b, b, c, b, c, b, c, space};
