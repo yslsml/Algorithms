@@ -13,24 +13,20 @@ public class TuringMachine {
         while (state != State.q0) {
             if (state == State.q1) {
                 if (Objects.equals(array[i], space)) {
-                    array[i] = space;
                     state = State.q1;
                     i++;
                     if (i == array.length) {
                         state = State.q0;
                     }
                 } else if (Objects.equals(array[i], one)) {
-                    array[i] = one;
                     state = State.q2;
                     i++;
                 }
             } else if (state == State.q2) {
                 if (Objects.equals(array[i], one)) {
-                    array[i] = one;
                     state = State.q2;
                     i++;
                 } else if (Objects.equals(array[i], space)) {
-                    array[i] = space;
                     state = State.q3;
                     i--;
                 }

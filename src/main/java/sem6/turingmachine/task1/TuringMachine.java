@@ -13,7 +13,6 @@ public class TuringMachine {
         while (state != State.q0) {
             if (state == State.q1) {
                 if (Objects.equals(array[i], space)) {
-                    array[i] = space;
                     state = State.q1;
                     i++;
                     if (i == array.length) {
@@ -24,11 +23,9 @@ public class TuringMachine {
                     state = State.q1;
                     i++;
                 } else if (Objects.equals(array[i], c)) {
-                    array[i] = c;
                     state = State.q1;
                     i++;
                 } else if (Objects.equals(array[i], a)) {
-                    array[i] = a;
                     state = State.q2;
                     i++;
                 }
@@ -42,11 +39,9 @@ public class TuringMachine {
                     state = State.q2;
                     i++;
                 } else if (Objects.equals(array[i], space)) {
-                    array[i] = space;
                     state = State.q2;
                     i--;
                 } else if (Objects.equals(array[i], a)) {
-                    array[i] = a;
                     state = State.q3;
                     i--;
                 }
@@ -56,8 +51,16 @@ public class TuringMachine {
                     state = State.q3;
                     i--;
                 } else if (Objects.equals(array[i], space)) {
-                    array[i] = space;
-                    state = State.q0;
+                    state = State.q4;
+                    i++;
+                }
+            } else if (state == State.q4) {
+                if (Objects.equals(array[i], a)) {
+                    state = State.q1;
+                    i++;
+                } else if (Objects.equals(array[i], space)) {
+                    state = State.q4;
+                    i++;
                 }
             }
         }
