@@ -23,8 +23,6 @@ public class Graph {
         }
         Random random = new Random();
         for (int i = 0; i < verteces; i++) {
-            // Randomly select two vertices to
-            // create an edge between them
             int v = random.nextInt(graph.verteces);
             int w = random.nextInt(graph.verteces);
 
